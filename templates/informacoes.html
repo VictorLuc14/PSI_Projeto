@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações</title>
+    <link rel="stylesheet" href="static\styles\style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Informações</h1>
+        {% for i in lista %}
+        {%if lista.index(i)==0 or lista.index(i)==6%}
+         
+        {%else%}
+        <p>{{lista[lista.index(i)]}}</p> 
+        {%endif%}
+            {% endfor %}
+    </div>
+</body>
+</html>

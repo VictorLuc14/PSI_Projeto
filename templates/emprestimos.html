@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empréstimos - Biblioteca</title>
+    <link rel="stylesheet" href="static\styles\style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Empréstimos</h1>
+
+        <table>
+            <tr>
+                <th>Título do Livro</th>
+                <th>Situação</th>
+                <th>Mais Informações</th>
+                <th>Pegar Empréstimo</th>
+            </tr>
+            {% for i in lista %}
+                <tr>
+                    <td>{{lista[lista.index(i)][1]}}</td>
+                    <td>
+                        {%if lista[lista.index(i)][6]==1 %}
+                            Disponível
+                        {%else%}
+                            Indisponível
+                        {%endif%}    
+                    </td>
+                    <td>
+                        <form action="{{url_for('informacoes')}}" method="post">
+                        <button type="submit" value="{{lista[lista.index(i)][0]}}" name="valor">Mais Informações</a></button>
+                        </form>
+                    </td>
+                    <td>
+                        {%if lista[lista.index(i)][6]==1%}
+                        <form action="{{url_for('reserva')}}" method="post">
+                        <button type="submit" value="{{lista[lista.index(i)][0]}}" name="id">Mais Informações</a></button>
+                        </form>
+                        {%else%}
+                        <form>
+                        <button value="{{lista[lista.index(i)][0]}}">Mais Informações</a></button>
+                        </form>
+                        {%endif%}
+                    </td>
+                    
+                </tr>
+            {% endfor %}
+        </table>
+    </main>
+</body>
+</html>

@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cor1: white;
+  --cor2: steelblue;
+  --cor3: skyblue;
+  --cor4: red;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor1);
+}
+
+nav {
+  background-color: var(--cor2);
+  height: 40px;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: var(--cor1);
+}
+
+li{
+  color: var(--cor2);
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+    border: solid var(--cor2) 1px;
+    padding: 4px;
+    margin: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+h1, p {
+    text-align: center;
+    display: flex;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid var(--cor3);
+}
+
+input[type="submit"] {
+    font-size: 15px;
+    background-color: var(--cor2);
+    color: var(--cor1);
+    padding: 10px 60px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid var(--cor3);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--cor2);
+    color: var(--cor1);
+}
+
+button {
+    background-color: var(--cor2);
+    color: var(--cor1);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-cad, .container-login{
+    display: flex;
+    justify-content: center;
+    border: solid var(--cor2) 1px;
+    padding: 25px;
+}
+
+button a {
+    text-decoration: none;
+    color: var(--cor1);
+}
+
+.container{
+    justify-content: center;
+}

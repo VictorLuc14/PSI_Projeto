@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Biblioteca</title>
+    <link rel="stylesheet" href="static\styles\style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/cadastro">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Login</h1>
+        <div class="container-login">
+            
+            <form action="{{url_for('login')}}" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha"><br><br>
+                <input type="submit" value="Entrar">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
